@@ -1,29 +1,25 @@
-
 Feature: Add Customer in demo site
-
-  Scenario: Add Customer with hard coded detas 
-    Given user launches demo telecom site
-    And user click on add customer button
-    When user  enters all the fields
-    And user click on submit button
-    Then user should be displayed customer ID is generated or not
-    
-    Scenario: Add Customer with hard coded detas 
-    Given user launches demo telecom site
-    And user click on add customer button
-    When user  enters all the fields with one dimensional
-    | sathya | vijayan | sathyajva625@gmail.com | chennai25 | 9455144256 |
-    And user click on submit button
-    Then user should be displayed customer ID is generated or not
-    
-    Scenario: Add Customer with hard coded detas 
-    Given user launches demo telecom site
-    And user click on add customer button
-    When user  enters all the fields with one dimensional map
-    | Fname   | sathya                |
-    | Lname   | vijayan               |
-    | Email   |sathyajva625@gmail.com | 
-    | Address | chennai25             | 
-    | Phno    | 9455144256            |
-    And user click on submit button
-    Then user should be displayed customer ID is generated or not
+  @sanity1
+  Scenario: Add Customer with hard coded datas
+    And User click on add customer button
+    When User enters all the fields
+    And User click on submit button
+    Then User should be displayed customer ID is generated or not 
+ @smoke1 @sathya
+  Scenario: One Dim List 
+    And User click on add customer button
+    When User enters all the fields with one dimensional
+      | sathya | vijayan | sathyajav3@gmail.com | aranthangi | 965321456 |
+    And User click on submit button
+    Then User should be displayed customer ID is generated or not
+ @sathya
+  Scenario: 
+    And User click on add customer button
+    When User enters all the fields with one dimensional map
+      | Fname   | sathya                |
+      | Lname   | vijayan               |
+      | Email   | sathyajav3@gmail.com  |
+      | Address | aranthangi            |
+      | phno    | 965321456      |
+    And User click on submit button
+    Then User should be displayed customer ID is generated or not
